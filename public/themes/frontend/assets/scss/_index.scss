@@ -1,0 +1,1077 @@
+@import './variable';
+
+/**Slide home page**/
+.slide {
+    .slide-wrap  {
+        img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 1250px;
+        }
+    }
+    .slide-content {
+        top: 173px;
+        width: 100%;
+        h1 {
+            color: #FFF;
+            font-size: 72px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.44px;
+            margin-bottom: 10px;
+
+            span {
+                color: $primary;
+            }
+        }
+        p {
+            max-width: 802px;
+            margin: 0 auto;
+            color: #FFF;
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 24px;
+        }
+        .button {
+            padding: 20px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+/**About us home page**/
+.about-us {
+    position: relative;
+    margin: -120px 0;
+    overflow: hidden;
+
+    .container-about-us {
+        padding: 98px 70px 97px 70px;
+        background: url('../assets/image/about-us-back.png') no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        max-width: 1332px;
+    }
+
+    .about-us-wrap {
+        gap: 109px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('../assets/image/icons/about-us-icon-out-container.svg') no-repeat;
+            background-size: cover;
+            width: 116px;
+            height: 149px;
+            right: -90px;
+            top: 130px;
+            z-index: 3;
+        }
+    }
+
+    .about-us-content {
+        margin-top: 42px;
+        .about-us-title-icon {
+            bottom: -9px;
+            right: 0;
+            transform: translateX(calc(100% - 35px));
+        }
+        h3 {
+            font-size: 48px;
+            line-height: 64px;
+            letter-spacing: 0.96px;
+            span {
+                color: $primary;
+                border-bottom: 1.5px solid $primary;
+            }
+        }
+        .about-us-des {
+            color: #2C2C2C;
+            font-size: 18px;
+            line-height: 36px;
+            margin: 20px 0 52px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: unset;
+        
+        }
+        .button {
+            padding: 13px 30px;
+        }
+    }
+
+    .about-us-image {
+        flex: 0 0 500px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: 1px solid #CF3031;
+            top: 20px;
+            left: 20px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: 1px solid #CF3031;
+            top: 40px;
+            left: 40px;
+        }
+    }
+}
+
+
+/**Our service home page**/
+.our-service {
+    background: url('../assets/image/our-service-back.png') no-repeat;
+    background-size: cover;
+    margin-bottom: 80px;
+    padding-bottom: 110px;
+
+    .our-service-content {
+        padding-top: 210px;
+        margin-bottom: 100px;
+
+        .sub-title {
+            color: #F3F3F3;
+        }
+        h3 {
+            color: #fff;
+        }
+    }
+
+    .our-service-wrap {
+        display: flex;
+        gap: 85px;
+        justify-content: space-between;
+        .our-service-item {
+            flex: 0 1 226px;
+            text-align: center;
+            h4 {
+                margin: 26px 0 18px 0;
+                color: #FFF;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.4px;
+                font-family: $font-Playfair;
+            }
+            p {
+                color: #CFCFCF;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+
+/**Our product home page**/
+.our-product {
+    margin-bottom: 75px;
+
+    .our-product-content {
+        h3 {
+            margin: 0px 0 70px 0;
+            letter-spacing: 0.96px;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -58px;
+        svg {
+            width: 15px;
+        }
+    }
+    .swiper-button-next {
+        right: -58px;
+        svg {
+            width: 15px;
+        }
+    }
+}
+
+/**Guiding story home page**/
+.guiding-story {
+    position: relative;
+    padding: 202px 0 226px 0;
+    overflow: hidden;
+    margin-bottom: 104px;
+
+    .guiding-story-background {
+        background: url('../assets/image/guiding-story-back.png') no-repeat;
+        background-size: cover;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 72px);
+        border-radius: 0 358px 358px 0;
+    }
+
+    .guiding-story-content {
+        position: relative;
+        max-width: 447px;
+        h3 {
+            margin-bottom: 40px;
+            font-size: 38px;
+            line-height: 50px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 1px;
+                background: #AAA;
+                left: 0;
+                bottom: -20px;
+            }
+        }
+        p {
+            line-height: 32px; 
+            margin-bottom: 36px;
+        }
+    }
+
+    .guiding-story-image  {
+        position: absolute;
+        height: 789px;
+        bottom: 0;
+        left: 50%;
+        aspect-ratio: 1191/789;
+    }
+}
+
+/**Special menu home page**/
+.special-menu {
+    h3 {
+        margin: 0px 0 50px;
+        letter-spacing: 0.96px;
+    }
+
+    .special-menu-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .special-menu-image {
+            flex: 0 0 46.25%;
+            text-align: center;
+        }
+
+        .special-menu-info {
+            flex: 0 0 53.75%;
+            text-align: center;
+        }
+
+        .special-menu-info {
+            padding: 0 20px;
+        }
+    }
+
+    .special-menu-image {
+        background: url('../assets/image/special-menu-image.png') no-repeat;
+        background-size: cover;
+    }
+
+    .special-menu-info {
+        background: url('../assets/image/special-menu-back.png') no-repeat;
+        background-size: cover;
+    }
+
+    .special-menu-item {
+        max-width: 418px;
+        margin: 100px auto 207px;
+
+        h4 {
+            font-family: $font-Playfair;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 140%;
+            margin-top: 24px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 36px;
+        }
+    }
+
+    .special-menu-swiper-button {
+        bottom: 100px;
+        width: 202px;
+        margin: 0 auto;
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $primary;
+        }
+        .swiper-button-prev {
+            left: 0;
+            top: 50%;
+            width: 7px;
+            transform: translateY(-50%);
+            &:hover {
+                svg path {
+                    stroke: $primary;
+                }
+            }
+        }
+        .swiper-button-next {
+            right: 0;
+            width: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            &:hover {
+                svg path {
+                    stroke: $primary;
+                }
+            }
+        }
+    }
+}
+
+/**Special menu home page**/
+.booking-table {
+    background: url('../assets/image/booking-back.png') no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    margin-bottom: 109px;
+
+    .sub-title {
+        border-top: 1px solid #F05F5F;
+        border-bottom: 1px solid #F05F5F;
+        color: #F49C9C;
+    }
+    
+    h3 {
+        color: #FFF;
+        line-height: 64px;
+        letter-spacing: 0.96px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+
+    .booking-table-form {
+        form {
+            display: flex;
+            justify-content: space-between;
+            gap: 75px;
+            align-items: center;
+            select, input {
+                width: 254px;
+                padding: 13px 15px;
+                border: 1px solid #FFF;
+                background: transparent;
+                appearance: none;
+                background: url('../assets/image/icons/arrow-down-input.svg') no-repeat;
+                background-size: 24px 24px;
+                background-position: center right 13px;
+            }
+            input[type=date], input[type=time] {
+                color: #fff;
+
+                &::-webkit-inner-spin-button{
+                    opacity: 0;
+                }
+                &::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                }
+            }
+            select  {
+                color: #fff;
+                option {
+                    color: #000;
+                }
+            }
+            
+            button {
+                padding: 13px 40px;
+                background: #000;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+/**Testimonial home page**/
+.testimonial {
+    margin-bottom: 140px;
+
+    h3 {
+        position: relative;
+        line-height: 64px; 
+        width: fit-content;
+        margin: 0 auto 60px;
+        letter-spacing: 0.96px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -115px;
+            top: 9px;
+            width: 82px;
+            height: 65px;
+            background: url('../assets/image/icons/testimonial-title-back.svg') no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .testimonial-item {
+        position: relative;
+        border-radius: 50px 50px 0px 0px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .testimonial-item-content {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding: 39px 49px 43px 42px;
+            background: rgba(0, 0, 0, 0.70);
+            color: #fff;
+            transform: translateY(calc(100% - 157px));
+            transition: all 0.5s ease;
+        }
+
+        &:hover {
+            .testimonial-item-content {
+                transform: translateY(0);
+                background: #000;
+            }
+        }
+
+        .testimonial-item-user {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: 0.024px;
+            }
+            span {
+                color: #BFBFBF;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.03px;
+            }
+
+            .testimonial-item-user-name {
+                p {
+
+                }
+                span {
+
+                }
+            }
+        }
+
+        .testimonial-item-star {
+            margin: 21px 0 15px 0;
+        }
+
+        .testimonial-item-oh {
+            font-size: 20px;
+        }
+
+        .testimonial-item-say {
+            color: #BFBFBF;
+            font-size: 13px !important;
+            line-height: 24px; 
+        }
+    }
+}
+
+/**Instagram home page**/
+.instagram {
+    overflow: hidden;
+    background: url('../assets/image/instagram-back.png') no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
+    position: relative;
+    padding: 195px 0 363px;
+
+    .instagram-content {
+        max-width: 414px;
+
+        h3 {
+            color: $primary;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.96px;
+            margin-bottom: 47px;
+        }
+
+        .button {
+            padding: 12px 16px;
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            &:hover {
+                svg path {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+
+    .instagram-image {
+        display: flex;
+        position: absolute;
+        left: 45%;
+        top: 0;
+        max-width: 755px;
+        width: calc(55% - 60px);
+        gap: 35px;
+        max-height: 723px;
+        overflow: hidden;
+
+        .instagram-image-item {
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                transition: all 0.3s ease;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .instagram-image-two {
+        transform: translateY(-180px);
+    }
+
+    .instagram-image-one, .instagram-image-two {
+        height: fit-content;
+        display: flex;
+        gap: 35px;
+        flex-direction: column;
+    }
+
+    .instagram-image-one {
+        animation: instagramColumn 20s linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    .instagram-image-two {
+        animation: instagramColumnReverse 20s linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+}
+@keyframes instagramColumn {
+    0% {
+        transform: translateY(calc(-50% + 25px));
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes instagramColumnReverse {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-50% + 25px));
+    }
+}
+
+
+/**Blog home page**/
+.home-blog {
+    margin-bottom: 119px;
+
+    h3 {
+        margin: 0px 0 100px;
+        letter-spacing: 0.96px;
+    }
+    .swiper-button-prev {
+        left: 10px;
+        transform: translateX(-50%);
+    }
+
+    .swiper-button-next {
+        right: 10px;
+        transform: translateX(50%);
+    }
+}
+
+
+/**Partner home page**/
+.partner {
+    margin-bottom: 110px;
+
+    .partner-content {
+        margin-bottom: 80px;
+    }
+
+    .partner-item {
+        width: 100%;
+        aspect-ratio: 5/3;
+        border: 1px solid #DBDBDB;
+        background: #FFF;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .swiper-wrapper {
+        justify-content: center;
+        @include desktop {
+            justify-content: initial;
+        }
+    }
+}
+
+
+//**Index Responsive**//
+@include desktop {
+    .slide {
+        .slide-content {
+            top: 120px;
+        }
+    }
+
+    .about-us {
+        .container-about-us {
+            max-width: 1100px;
+            padding: 70px;
+            max-width: 960px;
+        }
+
+        .about-us-content {
+            h3 {
+                font-size: 36px;
+                line-height: normal;
+            }
+            .about-us-title-icon {
+                right: -35px;
+                width: 50px;
+            }
+            .about-us-des {
+                font-size: 16px;
+                line-height: normal;
+            }
+        }
+
+        .about-us-wrap {
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-us-image {
+            flex: 0 0 45%;
+        }
+    }
+
+    .our-service {
+        .our-service-wrap {
+            gap: 32px;
+            .our-service-item {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .guiding-story {
+        padding: 100px 0;
+        .guiding-story-background {
+            top: 0;
+            height: 100%;
+        }
+
+        .guiding-story-image {
+            height: 350px;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+    }
+
+    .booking-table {
+        .booking-table-form {
+            form {
+                gap: 24px;
+                input, select {
+                    width: 220px;
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        .testimonial-item {
+            .testimonial-item-content {
+                position: relative;
+                transform: translateY(0);
+                background: #000;
+                padding: 24px;
+            }
+        }
+    }
+
+    .our-product {
+        .swiper-button-prev {
+            left: -15px;
+        }
+
+        .swiper-button-next {
+            right: -15px;
+        }
+    }
+
+    .instagram {
+        .instagram-content {
+            max-width: 340px;
+
+            h3 {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+}
+
+@include tablet {
+    .slide {
+        .slide-content {
+            top: 60px;
+            
+            h1 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .our-service {
+        .our-service-wrap {
+            .our-service-item {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .guiding-story {
+        .guiding-story-content {
+            max-width: 340px;
+        }
+    }
+
+    .about-us {
+        .about-us-wrap {
+            &:before {
+                right: -70px;
+            }
+        }
+    }
+
+    .special-menu {
+        .special-menu-item {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .booking-table {
+        .booking-table-form {
+            form {
+                flex-wrap: wrap;
+                input, select {
+                    width: 100%;
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .instagram {
+        padding: 80px 0 0;
+        .instagram-content {
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .instagram-image {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            left: 0;
+            max-height: 500px;
+        }
+    }
+
+    .home-blog {
+        .home-blog-content {
+            text-align: center;
+        }
+    }
+}
+
+@include landscape-phone {
+    .about-us {
+        margin: 0;
+        .about-us-wrap {
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .container-about-us {
+            border-radius: 0;
+            padding: 40px 70px;
+        }
+
+        .about-us-image {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+
+    .our-service {
+        .our-service-wrap {
+            overflow: scroll hidden;
+            .our-service-item {
+                flex: 0 0 35%;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .guiding-story {
+        padding: 60px 0;
+        .guiding-story-background {
+            border-radius: 0;
+        }
+
+        .guiding-story-content {
+            max-width: 100%;
+        }
+
+        .guiding-story-image {
+            bottom: 0;
+            transform: translateY(40%);
+        }
+    }
+
+    .our-product {
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+    }
+
+    .special-menu {
+        .special-menu-wrap {
+            flex-wrap: wrap;
+            .special-menu-info  {
+                flex: 0 0 100%;
+            }
+
+            .special-menu-image {
+                flex: 0 0 100%;
+                height: 400px;
+                background-position: top 30% left;
+            }
+        }
+
+        .special-menu-item {
+            max-width: 418px;
+            margin: 60px auto 60px;
+        }
+
+        .special-menu-swiper-button {
+            bottom: 10px;
+        }
+    }
+
+    .booking-table {
+        .booking-table-form {
+            form {
+                input, select {
+                    flex: 1 0 min(220px, 50%);
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        margin-bottom: 80px;
+    }
+
+    .home-blog {
+        h3 {
+            margin: 8px 0 50px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            display: none;
+        }
+    }
+    
+}
+
+@include mobile {
+    .slide {
+        .slide-content {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .about-us {
+        .about-us-content {
+            h3 {
+                font-size: 24px;
+            }
+            .about-us-des {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .our-service {
+        .our-service-wrap {
+            gap: 20px;
+        }
+    }
+
+    .guiding-story {
+        .guiding-story-content {
+            h3 {
+                font-size: 24px;
+                line-height: 1.5;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .special-menu {
+        .special-menu-wrap {
+            .special-menu-image {
+                height: 300px;
+            }
+        }
+    }
+
+    .booking-table {
+        .booking-table-form {
+            form {
+                input, select, button {
+                    flex:  0 0 calc(50% - 12px);
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        h3 {
+            line-height: 1.5;
+        }
+        
+        .testimonial-item {
+            .testimonial-item-image {
+                height: 300px;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .instagram {
+        .instagram-content {
+            h3 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .book-apppointment  {
+        .book-apppointment-background {
+            aspect-ratio: 1;
+        }
+    }
+}
+
+@include small-mobile {
+    .about-us {
+        .container-about-us {
+            padding: 20px ;
+            overflow: hidden;
+        }
+    }
+
+    .our-service {
+        .our-service-wrap {
+            .our-service-item {
+                flex: 0 0 60%;
+            }
+        }
+    }
+
+    .booking-table {
+        .booking-table-form {
+            form {
+                input, select, button {
+                    flex:  1 0 min(220px, 50%);
+                }
+            }
+        }
+    }
+}

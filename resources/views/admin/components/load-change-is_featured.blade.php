@@ -1,0 +1,1 @@
+<a  class="btn btn-sm {{$data->is_featured==1?'btn-danger':'btn-info'}} lb-hot" data-value="{{$data->is_featured}}" data-type="{{$type?$type:''}}"  style="width:63px;">{{--$data->is_featured==1?'Có':'Không'--}} @lang(App\Consts::TITLE_BOOLEAN[$data->is_featured])</a>

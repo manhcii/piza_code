@@ -1,0 +1,584 @@
+@import './variable';
+
+
+//***Base Css***//
+@include min-extra-desktop {
+    .container {
+        max-width: 1192px;
+    }
+}
+
+/*Reset CSS*/
+body {
+    font-family: $font-OpenSans;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.row {
+    margin-right: -16px;
+    margin-left: -16px;
+}
+
+.row>* {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+h1 {
+    font-family: $font-Playfair;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: $font-Playfair;
+    font-weight: 600;
+    font-size: 46px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: $font-Playfair;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 0;
+}
+
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+
+    &:-webkit-any-link:focus-visible {
+        outline: none;
+    }
+
+    &:-webkit-any-link:focus {
+        outline: none;
+    }
+}
+
+ul,
+li {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+input,
+textarea,
+select {
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.clear-input {
+    top: 50%;
+    display: inline-flex;
+    cursor: pointer;
+    right: 15px;
+    transform: translate(50%, -50%);
+    width: 16px;
+    height: 16px;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.visible-element {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.checkbox {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input[type="checkbox"] {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .checkmark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19px;
+        height: 19px;
+        border-radius: 3px;
+        border: 1px solid #dedede;
+
+        svg g path {
+            fill: #fff;
+        }
+    }
+}
+
+.checkbox:has(input[type=checkbox]:checked) .checkmark {
+    width: 19px;
+    height: 19px;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.sub-title {
+    display: inline-block;
+    color: #727272;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #727272;
+    border-top: 1px solid #727272;
+}
+
+.button {
+    display: inline-block;
+    background: $primary;
+    border: 1px solid $primary;
+    padding: 15px 40px;
+    transition: background 0.3s ease;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+
+    @include desktop {
+        padding: 10px 30px;
+    }
+
+    @include landscape-phone {
+        padding: 10px 20px;
+    }
+
+    @include mobile {
+        padding: 5px 20px;
+    }
+
+    &:hover {
+        background: #fff;
+        color: $primary;
+    }
+}
+
+.hide-item {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin-bottom: 0 !important;
+  }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .pagination-button {
+        color: rgba(73, 80, 87, 0.50);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 25px; 
+        border-bottom: 2px solid transparent;  
+        transition: all 0.5s ease;
+
+        &:hover {
+            border-bottom: 2px solid $primary;  
+        }
+
+        &.active {
+            color: #000;
+            border-bottom: 2px solid $primary;
+        }
+    }
+}
+
+.product-item {
+    .product-item-image {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 19px;
+
+        img {
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .product-name {
+        color: #242424;
+        font-family: $font-Playfair;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    .product-price {
+        text-align: center;
+        color: #242424;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+}
+
+.blog-item {
+    .blog-item-image {
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 22px;
+
+        img {
+            transition: all 0.5s ease;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .blog-item-info {
+        a {
+            font-family: $font-Playfair;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0.4px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .blog-item-des {
+            color: #727272;
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    &:after {
+        font-size: 0;
+    }
+}
+
+.swiper-circle {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(22, 22, 22, 0.05);
+
+    svg {
+        width: 12px;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        svg path {
+            stroke: #CF3031;
+        }
+    }
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 18px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    .contact-form-line {
+        position: relative;
+        flex: 0 0 auto;
+        width: calc(50% - 9px);
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #606060;
+            font-size: 13px;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #8A8A8A;
+            padding: 8px 15px 8px 0;
+            line-height: 14px;
+            font-size: 14px;
+            letter-spacing: 0.035px;
+            background: transparent;
+
+            &::placeholder {
+                color: #000;
+                font-weight: 400;
+            }
+        }
+
+        select {
+            appearance: none;
+            font-weight: 500;
+
+            &::placeholder {
+                font-weight: 500;
+            }
+        }
+
+        .input-select {
+            label {
+                position: absolute;
+                top: 9px;
+                left: 20px;
+                font-size: 10px;
+                font-weight: 400;
+                color: #1a1a1a;
+                text-transform: initial;
+            }
+
+            select {
+                background: url('../assets/image/icons/arrow-down-input-black.svg') no-repeat center right 20px;
+                color: #606060;
+            }
+
+            #seclect-country {
+                padding: 23px 0 7px 20px;
+                background: url('../assets/image/icons/arrow-down-input.svg') no-repeat center right 20px;
+                color: #000;
+                font-weight: 500;
+            }
+        }
+
+        textarea {
+            height: 79px;
+            resize: none;
+        }
+
+        .text-note-input {
+            margin-bottom: 15px;
+            color: #606060;
+        }
+    }
+
+    .contact-form-line-full {
+        width: 100%;
+
+        input {
+            accent-color: #727272;
+            margin-right: 12px;
+        }
+    }
+
+    .button {
+        padding: 19px;
+        width: 100%;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-top: 27px;
+    }
+}
+
+.page-banner {
+    img {
+        width: 100%;
+        max-height: 800px;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+
+
+//***Responsive***//
+
+@include min-desktop {
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $primary;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b10032;
+    }
+}
+
+
+
+
+@include tablet {
+    .swiper-circle {
+        height: 36px;
+        width: 36px;
+    }
+}
+
+@include landscape-phone {
+    h2 {
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: normal;
+
+        a {
+            font-size: 32px;
+            line-height: normal;
+        }
+    }
+
+    h4 {
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .blog-item {
+        .blog-item-info {
+            text-align: center;
+        }
+    }
+}
+
+@include mobile {
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+
+        a {
+            font-size: 24px;
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    .sub-title {
+        font-size: 12px;
+    }
+
+    .product-item {
+        .product-name {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    .blog-item {
+        .blog-item-info {
+            .blog-item-des {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+@include small-mobile {
+    .contact-form-row {
+        .contact-form-line {
+            width: 100%;
+        }
+    }
+}
+
+
+@import './header.scss';
+@import './footer';
+@import './breadcumb';
+@import './index.scss';
+
+//Css all pages
+@import './about-us';
+@import './our-service';
+@import './menu';
+@import './list-product';
+@import './page-contact';
+@import './blog-list';
+@import './blog-detail';
+@import './booknow';
+@import './404';

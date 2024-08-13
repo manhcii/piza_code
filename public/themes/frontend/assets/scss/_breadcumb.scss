@@ -1,0 +1,37 @@
+@import './variable';
+
+.breadcrumb {
+    background: #F7EFE4;
+    padding: 12px 0;
+    margin-bottom: 0;
+
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb-link {
+        font-size: 14px;
+        line-height: 26px;
+        white-space: nowrap;
+  
+      &:last-child {
+        color: #606060;
+      }
+    }
+
+    .breadcrumb-arrow {
+      margin-top: -3px;
+    }
+  }
+
+
+@include tablet {
+    .breadcrumb {
+        display: none;
+    }
+}

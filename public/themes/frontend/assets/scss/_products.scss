@@ -1,0 +1,265 @@
+// START PRODUCTS PAGE
+// START BANNER
+#fhm-products-banner {
+  background: linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.67) 0.01%,
+      rgba(0, 0, 0, 0.12) 40.63%,
+      rgba(0, 0, 0, 0.12) 68.75%,
+      rgba(0, 0, 0, 0.76) 100%
+    ),
+    url(../images/banners/products-banner.png) center no-repeat;
+  background-size: cover;
+  padding: 269px 0 267px;
+  @include tablet {
+    padding: 200px 0;
+  }
+  @include landscape-phone {
+    padding: 150px 0;
+  }
+}
+// END BANNER
+
+// START PRODUCTS
+#fhm-products {
+  margin-top: 100px;
+  @include landscape-phone {
+    margin-top: 80px;
+  }
+
+  .products-slider {
+    margin-top: 60px;
+    padding: 0 85px;
+    position: relative;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    .products-slide-item {
+      max-width: 140px;
+      margin: 0 auto;
+      cursor: pointer;
+      .image {
+        min-width: 140px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        text-align: center;
+        margin-top: 24px;
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: $fw-semiBold;
+        color: $gray;
+        transition: all ease 0.5s;
+        @include landscape-phone {
+          font-size: 18px;
+          line-height: 25px;
+        }
+        @include mobile {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      &.active {
+        .text {
+          color: $red;
+        }
+      }
+    }
+    .slider-button-prev,
+    .slider-button-next {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .slider-button-next {
+      right: 0;
+    }
+    .slider-button-prev {
+      left: 0;
+    }
+  }
+  .tab-content {
+    > .active {
+      display: grid;
+    }
+  }
+  .products-group {
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 25px;
+      row-gap: 45px;
+      margin-top: 80px;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile {
+        column-gap: 15px;
+        row-gap: 30px;
+      }
+      .products-item {
+        .image {
+          border-radius: $border-radius-m;
+          overflow: hidden;
+          width: 100%;
+          aspect-ratio: 1;
+          margin-bottom: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .name {
+          font-size: 22px;
+          line-height: 32px;
+          font-weight: $fw-semiBold;
+          margin-bottom: 8px;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          height: 64px;
+          @include landscape-phone {
+            font-size: 18px;
+            line-height: 25px;
+            height: 50px;
+          }
+          @include mobile {
+            font-size: 16px;
+            line-height: 1.5;
+            height: 48px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .price {
+          font-size: 18px;
+          line-height: 1.3em;
+          font-weight: $fw-bold;
+          color: $red;
+          display: block;
+          @include landscape-phone {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .main-button-m {
+    margin: 50px auto 0;
+    display: block;
+  }
+}
+// END PRODUCTS
+
+// START MISSION
+#fhm-products-mission {
+  background-image: url(../images/banners/products-mission.jpg);
+  @include landscape-phone {
+    margin-top: 80px;
+  }
+
+  .mission-content {
+    margin-top: 125px;
+    @include desktop {
+      margin-top: 70px;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
+    * {
+      color: $white;
+    }
+  }
+  .heading-block-l {
+    .desc {
+      font-size: 24px;
+      line-height: 1.8em;
+      @include landscape-phone {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+// END MISSION
+
+// START INTRODUCE
+#fhm-products-introduce {
+  margin: 120px 0 230px;
+  @include landscape-phone {
+    margin: 80px 0 0;
+  }
+  .introduce-wrapper {
+    @include flex(row, space-between, center, 30px, nowrap);
+    @include tablet {
+      flex-direction: column;
+      row-gap: 150px;
+    }
+    @include landscape-phone {
+      row-gap: 80px;
+    }
+    .introduce-image {
+      max-width: 530px;
+      width: 100%;
+      position: relative;
+      @include tablet {
+        max-width: 100%;
+      }
+      > img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: $border-radius-xxl;
+      }
+      .decor-element {
+        max-width: 450px;
+        width: 100%;
+        bottom: -120px;
+        left: -150px;
+        @include landscape-phone {
+          max-width: 300px;
+          left: -100px;
+          bottom: -50px;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+    .introduce-content {
+      max-width: 515px;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+      }
+      .heading-block-l {
+        .desc {
+          font-size: 24px;
+          line-height: 1.8em;
+          @include landscape-phone {
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+// END INTRODUCE
+
+// START CTA
+#fhm-products-cta {
+  @include landscape-phone {
+    margin-top: 50px;
+  }
+}
+// END CTA
+// END PRODUCTS PAGE

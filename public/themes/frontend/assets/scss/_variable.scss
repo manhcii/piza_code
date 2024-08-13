@@ -1,0 +1,68 @@
+$font-OpenSans: "Open Sans", sans-serif;
+$font-Playfair: "Playfair Display", serif;
+
+
+//Variable colors
+$primary : #ED1C24;
+
+//*************@media***************//
+
+@mixin min-extra-desktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra-desktop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin extra-small {
+  @media only screen and (min-width: 576px){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media only screen and (max-width: 391px) {
+    @content;
+  }
+}

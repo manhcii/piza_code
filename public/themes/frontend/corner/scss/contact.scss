@@ -1,0 +1,161 @@
+@import '../scss/variable';
+
+/*Css main*/
+main {
+    margin-top: 64px;
+}
+.contact-content {
+    h1 {
+        color: #272727;
+        font-family: $font-playfair-semibold;
+        font-size: 48px;
+        line-height: 1.25;
+        letter-spacing: 0.96px;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+    }
+    .contact-des {
+        color: #606060;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.36px;
+        margin-bottom: 40px;   
+    }
+    .contact-info {
+        ul {
+            li {
+                margin-bottom: 16px;
+                a, p {
+                    color: #272727;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-left: 6px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.contact-form {
+    margin-bottom: 137px;
+    .contact-form-row {
+        gap: 24px;
+        flex-wrap: wrap;
+        .contact-form-line {
+            flex: 0 0 auto;
+            width: calc(50% - 12px);
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: #606060;
+                font-family: $font-segoe-bold;
+                font-size: 13px;
+                line-height: 1.5;
+                text-transform: uppercase;
+            }
+            input, textarea, select {
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid #B9B9B9;
+                padding: 11px 12px;
+                color: #818181;
+                font-size: 16px;
+                line-height: 1.5; 
+            }
+            select {
+                appearance: none;
+            }
+            .input-select {
+                .input-select-arrow {
+                    top: -3px;
+                    transform: translateY(50%);
+                    right: 12px;
+
+                }
+            }
+            textarea {
+                resize: none;
+                height: 180px;
+            }
+        }
+        .contact-form-line-full {
+            width: 100%;
+            input {
+                width: 18px;
+                height: 18px;
+                accent-color: #527274;
+                margin-right: 12px;
+                vertical-align: middle;
+            }
+        }
+        .contact-form-line {
+            .acceptprivacy {
+                color: #272727;
+                font-family: $font-segoe-regular;
+                font-size: 16px;
+                line-height: 1.5;
+                text-transform: initial;
+                vertical-align: middle;
+                a {
+                    position: relative;
+                    color: #272727;
+                    &:before {
+                        content: "";
+                        position:absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: #000;
+                    }
+                    &:hover {
+                        color: #527274;
+                    }
+                }
+            }
+        }
+        .button {
+            color: #F8F8F8;
+            font-family: $font-segoe-bold;
+            font-size: 18px;
+            line-height: 1.5;
+            text-transform: capitalize;
+            margin-top: 16px;
+            &:hover {
+                color: #769496;
+            }
+        }
+    }
+}
+
+@media(max-width:1199px){
+    .contact-content {
+        margin-bottom: 80px;
+    }
+}
+@media(max-width:767px) {
+    .contact-form {
+        .contact-form-row {
+            .contact-form-line {
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width:767px){
+    .contact-content {
+        h1 {
+            font-size: 24px;
+        }
+        .contact-des {
+            font-size: 14px;
+        }
+        .contact-info {
+            ul li {
+                a, p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

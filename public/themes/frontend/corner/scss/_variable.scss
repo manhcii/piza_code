@@ -1,0 +1,41 @@
+@font-face {
+    font-family: SegoeUI-light;
+    src: url("../assets/fonts/Segoe\ UI\ Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: SegoeUI-regular;
+    src: url("../assets/fonts/Segoe\ UI\ Regurlar.ttf") format("truetype");
+}
+@font-face {
+    font-family: SegoeUI-semibold;
+    src: url("../assets/fonts/Segoe\ UI\ SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: SegoeUI-bold;
+    src: url("../assets/fonts/Segoe\ UI\ Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: Playfair-regular;
+    src: url("../assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Playfair-medium;
+    src: url("../assets/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: Playfair-semibold;
+    src: url("../assets/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: Playfair-bold;
+    src: url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+$font-segoe-regular: SegoeUI-regular, sans-serif;
+$font-segoe-semibold: SegoeUI-semibold, sans-serif;
+$font-segoe-bold: SegoeUI-bold, sans-serif;
+$font-segoe-light: SegoeUI-light, sans-serif;
+$font-playfair-regular: Playfair-regular, serif;
+$font-playfair-medium: Playfair-medium, serif;
+$font-playfair-semibold: Playfair-semibold, serif;
+$font-playfair-bold: Playfair-bold, serif;

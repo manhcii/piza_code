@@ -1,0 +1,529 @@
+// START SERVICE PAGE
+
+// START BANNER
+#fhm-services-banner {
+  background-image: url(../images/banners/services-banner.jpg);
+  padding: 269px 0 267px;
+  @include landscape-phone {
+    padding: 150px 0;
+  }
+}
+
+// END BANNER
+
+// START SERVICES
+#fhm-services {
+  margin-top: 100px;
+  @include landscape-phone {
+    margin-top: 70px;
+  }
+  .heading-block-m {
+    .desc {
+      max-width: 782px;
+    }
+  }
+  .services-block-wrapper {
+    @include flex(row, space-between, unset, 30px, nowrap);
+  }
+  .services-block-1 {
+    margin-top: 60px;
+    .services-block-wrapper {
+      position: relative;
+      @include landscape-phone {
+        flex-direction: column-reverse;
+        gap: 0;
+      }
+      > .decor-element {
+        max-width: 198px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        @include desktop {
+          bottom: -50px;
+          left: -80px;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+      .services-block-content {
+        max-width: 474px;
+        margin-top: 90px;
+        width: 100%;
+
+        @include desktop {
+          margin-top: 60px;
+        }
+
+        .heading-block-s {
+          .title {
+            @include tablet {
+              font-size: 30px;
+              line-height: 42px;
+            }
+          }
+          .desc {
+            max-width: 461px;
+            width: 100%;
+          }
+        }
+      }
+      .services-block-image {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 16px;
+        min-width: 50%;
+
+        @include tablet {
+          grid-gap: 12px;
+        }
+
+        &-item {
+          width: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          &:nth-child(1) {
+            grid-area: 1/1/4/4;
+            overflow: visible;
+            position: relative;
+            .decor-element {
+              top: -20px;
+              right: -50px;
+              transform: rotate(25deg);
+
+              @include tablet {
+                max-width: 100px;
+                width: 100%;
+                right: -20px;
+                top: -10px;
+              }
+            }
+            img {
+              border-top-right-radius: $border-radius-xl;
+              border-top-left-radius: $border-radius-xl;
+
+              @include tablet {
+                border-top-right-radius: 100px;
+                border-top-left-radius: 100px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            border-bottom-left-radius: $border-radius-l;
+            border-top-right-radius: $border-radius-m;
+          }
+          &:nth-child(3) {
+            border-radius: $border-radius-m;
+          }
+          &:nth-child(4) {
+            border-bottom-right-radius: $border-radius-l;
+            border-top-left-radius: $border-radius-m;
+          }
+        }
+      }
+    }
+  }
+  .services-block-2 {
+    margin-top: 90px;
+    padding: 100px 0;
+    background-image: url(../images/banners/services-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include large-desktop {
+      padding-bottom: 200px;
+    }
+    @include landscape-phone {
+      padding-top: 80px;
+      margin-top: 80px;
+    }
+    .services-block-wrapper {
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+    }
+    .services-block-slider-container {
+      position: relative;
+      .services-block-image {
+        width: 567px;
+        height: 600px;
+        border-radius: $border-radius-m;
+        border-top-right-radius: 200px;
+        position: relative;
+        border-right: 8px solid $red;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all ease 0.5s;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        @include mobile {
+          height: 450px;
+        }
+
+        .decor-element {
+          max-width: 69px;
+          width: 100%;
+          bottom: -30px;
+          left: -40px;
+          transform: scaleX(-1) rotate(-15deg);
+        }
+      }
+      .services-block-slider {
+        @include absolute(50%, -120px, 1);
+        transform: translateY(-50%);
+        width: 100px;
+        height: 340px;
+        @include tablet {
+          left: unset;
+          right: 0;
+        }
+        @include large-desktop {
+          top: unset;
+          right: unset;
+          bottom: -120px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          max-width: 340px;
+          height: 100px;
+          width: 100%;
+        }
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+        .services-slider-item {
+          overflow: hidden;
+          border-radius: 10px;
+          height: 100%;
+          cursor: pointer;
+          transition: all ease 0.5s;
+          &:hover {
+            transform: scale(0.9);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .slider-button-next,
+        .slider-button-prev {
+          left: 50%;
+          transform: translateX(-50%);
+          @include large-desktop {
+            display: flex;
+            top: 50%;
+            left: unset;
+            transform: translate(0, -50%) rotate(-90deg);
+          }
+          @include mobile {
+            display: none;
+          }
+        }
+        .slider-button-next {
+          bottom: -60px;
+          @include large-desktop {
+            right: -60px;
+          }
+        }
+        .slider-button-prev {
+          top: -60px;
+          @include large-desktop {
+            left: -60px;
+            top: 50%;
+          }
+        }
+      }
+    }
+    .services-block-content {
+      max-width: 500px;
+      margin-top: 145px;
+      @include tablet {
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
+      .heading-block-s {
+        .title {
+          color: $red;
+        }
+      }
+    }
+  }
+  .services-block-3 {
+    margin-top: 130px;
+    padding-bottom: 100px;
+    position: relative;
+    @include tablet {
+      margin-top: 60px;
+    }
+
+    .services-block-wrapper {
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+    > .decor-element {
+      width: 309px;
+      bottom: 0;
+      left: 0;
+      @include desktop {
+        display: none;
+      }
+    }
+    .services-block-content {
+      max-width: 468px;
+      margin-top: 136px;
+      @include tablet {
+        margin-bottom: 50px;
+        margin-top: 0;
+      }
+    }
+    .services-block-image {
+      position: relative;
+      max-width: 532px;
+      @include desktop {
+        width: 100%;
+        max-width: 100%;
+      }
+      > img {
+        width: 100%;
+        border-top-right-radius: $border-radius-xl;
+        border-bottom-left-radius: $border-radius-xl;
+        @include mobile {
+          border-top-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+        }
+      }
+      .decor-element {
+        &:nth-child(1) {
+          width: 230px;
+          top: -80px;
+          right: -80px;
+          z-index: -1;
+          @include mobile {
+            width: 180px;
+            top: -60px;
+            right: -40px;
+          }
+        }
+        &:nth-child(2) {
+          width: 330px;
+          bottom: -100px;
+          left: -50px;
+          @include mobile {
+            width: 200px;
+            bottom: -70px;
+            left: -10px;
+          }
+        }
+      }
+    }
+  }
+  .services-block-4 {
+    margin-top: 110px;
+    position: relative;
+    @include tablet {
+      margin-top: 70px;
+    }
+    @include mobile {
+      margin-top: 30px;
+    }
+    > .decor-element {
+      max-width: 176px;
+      width: 100%;
+      bottom: -54px;
+      right: 0;
+      @include tablet {
+        display: none;
+      }
+    }
+    .services-block-wrapper {
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+    }
+    .services-block-image {
+      max-width: 567px;
+      width: 100%;
+      position: relative;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: $border-radius-m;
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+        @include landscape-phone {
+          border-top-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: -22px;
+        right: -22px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border: 4px solid $red;
+        border-radius: $border-radius-m;
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+
+        @include landscape-phone {
+          display: none;
+        }
+      }
+    }
+    .services-block-content {
+      max-width: 500px;
+      padding-top: 195px;
+      position: relative;
+      @include desktop {
+        padding-top: 100px;
+        margin-left: 30px;
+        max-width: 400px;
+      }
+      @include tablet {
+        padding-top: 0;
+        margin-left: 0;
+        max-width: 500px;
+        margin-bottom: 70px;
+      }
+      @include mobile {
+        margin-bottom: 40px;
+      }
+      .decor-element {
+        max-width: 271px;
+        width: 100%;
+        top: -80px;
+        right: 90px;
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// END SERVICES
+
+// START COMMITMENT
+#fhm-services-commitment {
+  position: relative;
+  margin-top: 120px;
+  @include landscape-phone {
+    margin-top: 80px;
+  }
+  &::after {
+    content: "";
+    width: 90%;
+    height: 90%;
+    @include absolute(50%, 0, -1);
+    transform: translateY(-50%);
+    background-image: url(../images/banners/reason-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include large-desktop {
+      height: 100%;
+    }
+    @include tablet {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .services-commitment-content {
+    @include absolute(128px, unset, 1);
+    @include extra-desktop {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include tablet {
+      position: relative;
+      top: unset;
+      transform: unset;
+      padding: 80px 0;
+    }
+    * {
+      color: $white;
+    }
+    .heading-block-l {
+      max-width: 566px;
+      width: 100%;
+      @include desktop {
+        max-width: 450px;
+      }
+      @include tablet {
+        max-width: 100%;
+      }
+      .desc {
+        max-width: 515px;
+        width: 100%;
+      }
+    }
+  }
+  .services-commitment-image {
+    width: 45%;
+    overflow: hidden;
+    border-radius: 120px;
+    border: 2px solid $red;
+    margin-left: auto;
+
+    @include tablet {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .decor-element {
+    &:nth-child(1) {
+      max-width: 202px;
+      width: 100%;
+      top: -50px;
+      left: -17px;
+      @include extra-desktop {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      max-width: 188px;
+      width: 100%;
+      bottom: -80px;
+      left: 0;
+      @include extra-desktop {
+        display: none;
+      }
+    }
+  }
+}
+// END COMMITMENT
+
+// START SERVICE NEWS
+#fhm-services-news {
+  margin-top: 225px;
+  @include large-desktop {
+    margin-top: 130px;
+  }
+  @include landscape-phone {
+    margin-top: 80px;
+  }
+}
+// END SERVICE NEWS
+
+// END SERVICE PAGE

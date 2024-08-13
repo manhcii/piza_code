@@ -1,0 +1,134 @@
+// START BOOKING PAGE
+// START BANNER
+#fhm-booking-banner {
+  background: linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.67) 0.01%,
+      rgba(0, 0, 0, 0.12) 40.63%,
+      rgba(0, 0, 0, 0.12) 68.75%,
+      rgba(0, 0, 0, 0.76) 100%
+    ),
+    url(../images/banners/booking-banner.jpg) center no-repeat;
+  background-size: cover;
+  padding: 180px 0 360px;
+  @include tablet {
+    padding: 200px 0;
+  }
+  @include landscape-phone {
+    padding: 150px 0;
+  }
+}
+// END BANNER
+
+// START BOOKING
+#fhm-booking {
+  margin: 100px 0 100px;
+  @include landscape-phone {
+    margin-bottom: 50px;
+  }
+  @include mobile {
+    margin-bottom: 0;
+  }
+  .booking-wrapper {
+    @include flex(row, unset, unset, unset, unset);
+    height: 652px;
+    margin-top: 60px;
+    @include landscape-phone {
+      margin-top: 30px;
+      height: 600px;
+    }
+    .main-form {
+      padding: 65px 65px 0;
+      flex: 1;
+      box-shadow: 0px 0px 30px 0px rgba(0, 98, 132, 0.07);
+      @include tablet {
+        padding: 30px 30px 0;
+      }
+      @include mobile {
+        padding: 0;
+        box-shadow: none;
+      }
+      &-control {
+        &[type="date"] {
+          padding-right: 20px;
+        }
+      }
+      &-select {
+        .select-mark {
+          top: 16px;
+        }
+        select {
+          padding: 15px 20px;
+          font-weight: $fw-regular;
+          color: $gray;
+        }
+      }
+      &-btn {
+        border: 1px solid $black;
+        background-color: transparent;
+        color: $black;
+        text-transform: uppercase;
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 18px;
+        &:hover {
+          background-color: $red;
+          border-color: $red;
+          color: $white;
+        }
+      }
+    }
+    .booking-image {
+      height: 100%;
+      width: 100%;
+      max-width: 445px;
+      position: relative;
+      @include desktop {
+        display: none;
+      }
+      &-content {
+        @include flex(column, center, center, 35px, nowrap);
+        @include absolute(50%, 50%, 1);
+        transform: translate(-50%, -50%);
+        &-item {
+          .title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: $fw-semiBold;
+            color: $white;
+            margin-bottom: 10px;
+            text-align: center;
+          }
+          .text {
+            font-size: 14px;
+            line-height: 20px;
+            color: $white;
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: $border-radius-xl;
+        filter: brightness(0.5);
+      }
+      .decor-element {
+        max-width: 150px;
+        width: 100%;
+        top: -30px;
+        right: -30px;
+      }
+    }
+  }
+}
+// END BOOKING
+// END BOOKING PAGE

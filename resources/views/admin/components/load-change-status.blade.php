@@ -1,0 +1,1 @@
+<a  class="btn btn-sm {{$data->status=='active'?'btn-success':'btn-warning'}} lb-active" data-value="{{$data->status}}" data-type="{{$type?$type:''}}"  style="width:150px;">{{--$data->status=='active'?'Đang hoạt động':'Không hoạt động'--}} @lang($data->status)</a>

@@ -1,0 +1,141 @@
+// FONT FAMILY
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Quicksand:wght@300;400;500;600;700&family=Rufina:wght@400;700&display=swap");
+
+// FONT WEIGHT
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+
+// FONT FAMILY
+$font-family: "Quicksand", sans-serif;
+$font-family-2: "Kaushan Script", cursive;
+$font-family-3: "Rufina", serif;
+
+// COLORS
+$white: #fff;
+$white-2: #e6e6e6;
+$white-3: #f6f6f6;
+$black: #000;
+$black-1: #333333;
+$black-2: #2c2c2c;
+$red: #ed1c24;
+$red-2: #bd171c;
+$gray: #727272;
+$gray-2: #808080;
+$gray-3: #a1a1a1;
+$gray-4: #cfcfcf;
+$beige: #f7efe4;
+
+// DIMENSIONS
+$border-radius-xs: 3px;
+$border-radius-s: 15px;
+$border-radius-m: 20px;
+$border-radius-l: 50px;
+$border-radius-xl: 150px;
+$border-radius-xxl: 500px;
+$header-height: 42px;
+
+// KEYFRAMES
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes updown2 {
+  from {
+    transform: translateY(7%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes updown3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// START MIXINS
+@mixin flex($direction, $just, $align, $gap, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin absolute($top, $left, $z) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: $z;
+}
+
+// START BREAKPOINT VARIABLES
+@mixin extra-desktop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES

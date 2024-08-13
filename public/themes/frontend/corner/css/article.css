@@ -1,0 +1,215 @@
+@font-face {
+  font-family: SegoeUI-light;
+  src: url("../assets/fonts/Segoe UI Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-regular;
+  src: url("../assets/fonts/Segoe UI Regurlar.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-semibold;
+  src: url("../assets/fonts/Segoe UI SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-bold;
+  src: url("../assets/fonts/Segoe UI Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-regular;
+  src: url("../assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-medium;
+  src: url("../assets/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-semibold;
+  src: url("../assets/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-bold;
+  src: url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+#fhm-banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+main {
+  margin-top: 75px;
+  margin-bottom: 160px;
+}
+main .col-right {
+  position: sticky;
+  top: 45px;
+  height: 100%;
+}
+main .article-tags {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+main .article-tags .aticle-tag-item {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #EBF0F0;
+  cursor: pointer;
+}
+main .article-tags .aticle-tag-item a {
+  color: #353945;
+  font-size: 14px;
+  line-height: 1.3;
+}
+main .article-main h1 {
+  line-height: 1;
+  color: #272727;
+  font-family: Playfair-semibold, serif;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.64px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+main .article-main p {
+  color: #606060;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+main .article-main img {
+  margin: 12px 0 24px;
+}
+main .article-main blockquote {
+  position: relative;
+  color: #272727;
+  font-family: Playfair-semibold, serif;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.35;
+  max-width: 85%;
+  letter-spacing: 0.48px;
+  text-transform: capitalize;
+  padding-left: 66px;
+  margin: 40px 0 24px;
+}
+main .article-main blockquote:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 33px;
+  background: url("../assets/blockquote.svg");
+}
+main .article-main .block-image {
+  display: flex;
+  margin-top: 28px;
+  gap: 32px;
+}
+main .article-main .block-image img {
+  flex: 0 0 calc(50% - 16px);
+  max-width: calc(50% - 16px);
+}
+
+#fhm-article-related {
+  margin-bottom: 96px;
+}
+#fhm-article-related h3 {
+  margin-bottom: 48px;
+}
+#fhm-article-related .article-item .article-image {
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    height: 200px;
+    object-fit: cover;
+}
+#fhm-article-related .article-item .article-image img {
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+#fhm-article-related .article-item .article-image:hover img {
+  transform: scale(1.05);
+}
+#fhm-article-related .article-item .article-category {
+  color: #C2C2C2;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+#fhm-article-related .article-item h4 {
+  line-height: 1;
+  letter-spacing: 0px;
+  font-size: 20px;
+}
+#fhm-article-related .article-item h4 a {
+  color: #272727;
+  font-family: SegoeUI-semibold, sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+}
+#fhm-article-related .swiper-button-prev {
+  background: #769496;
+  opacity: 1;
+  left: calc(50% - 643px);
+}
+#fhm-article-related .swiper-button-next {
+  background: #769496;
+  opacity: 1;
+  right: calc(50% - 643px);
+}
+#fhm-article-related .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 1199px) {
+  #fhm-article-related .swiper-button-prev {
+    left: calc(50% - 500px);
+  }
+  #fhm-article-related .swiper-button-next {
+    right: calc(50% - 500px);
+  }
+  main .col-right {
+    position: initial;
+  }
+  main .article-main blockquote {
+    max-width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  #fhm-article-related .swiper-button-prev {
+    left: calc(50% - 380px);
+  }
+  #fhm-article-related .swiper-button-next {
+    right: calc(50% - 380px);
+  }
+}
+@media (max-width: 768px) {
+  main .article-tags {
+    margin-top: 48px;
+  }
+  main .block-image {
+    flex-wrap: wrap;
+  }
+  main .article-main .block-image img {
+    margin: 12px 0 0px;
+  }
+  main .article-main p {
+    font-size: 14px;
+  }
+  main .article-main blockquote {
+    max-width: 100%;
+    font-size: 18px;
+    padding-left: 30px;
+  }
+  main .article-main blockquote:before {
+    aspect-ratio: 42/33;
+    width: 25px;
+    height: auto;
+    background-size: cover;
+  }
+  #fhm-article-related .swiper-button-prev, #fhm-article-related .swiper-button-next {
+    display: none;
+  }
+}

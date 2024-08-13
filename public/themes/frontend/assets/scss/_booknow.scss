@@ -1,0 +1,147 @@
+@import './variable';
+
+//***Page Booknow Css***//
+.page-booknow {
+    .page-contact-main {
+        .booking-form {
+            input, select, textarea {
+                color: #727272;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            input[type=date], input[type=time] {
+                appearance: none;
+                background: url('../assets/image/icons/arrow-down-input-black.svg') no-repeat;
+                background-position: center right 20px;
+
+                &::-webkit-inner-spin-button{
+                    opacity: 0;
+                }
+                &::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                }
+            }
+
+            .page-booknow-button {
+                padding: 20px 50px;
+                text-align: center;
+                border-radius: 20px;
+                border: 1px solid #727272;
+                transition: all 0.3s ease;
+                width: 100%;
+                text-transform: uppercase;
+
+                &:hover {
+                    border: 1px solid #ED1C24;
+                    background: #ED1C24;
+                    color: #fff;
+                }
+            }
+
+        }
+
+        .booknow-time {
+            position: relative;
+            flex: 0 0 495px;
+            color: #fff;
+            background: url('../assets/image/booknow-time-back.png') no-repeat;
+            background-size: cover;
+            line-height: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 30px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                transform: translate(35%, 35%);
+                background: url('../assets/image/icons/page-about-cloud.svg') no-repeat;
+                background-size: contain;
+                width: 359px;
+                height: 123px;
+            }
+
+            .booknow-time-name {
+                font-size: 16px;
+                font-weight: 600;
+                margin: 34px 0 10px;
+            }
+
+            .booknow-time-day {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .booknow-time-hours {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+//***Responsive Page Booknow***//
+@include large-desktop {
+    .page-booknow {
+        .page-contact-main {
+            .booknow-time {
+                &:before {
+                    height: 90px;
+                    width: 260px;
+                    transform: translate(35px, 35%);
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .page-contact {
+        &:before {
+            content: none;
+        }
+    }
+
+    .page-booknow {
+        .page-contact-main {
+            .booknow-time {
+                flex: 0 0 100%;
+                min-height: 600px;
+            }
+        }
+    }  
+}
+
+@include landscape-phone {
+    .page-booknow {
+        .page-contact-main {
+            .booknow-time {
+                &:before {
+                    height: 83px;
+                    width: 234px;
+                    transform: translate(0, 35%);
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .page-booknow {
+        .page-contact-main {
+            .booknow-time {
+                flex: 0 0 100%;
+                min-height: 480px;
+
+                &:before {
+                    height: 65px;
+                    width: 180px;
+                    transform: translate(0, 50%);
+                }
+            }
+        }
+    }  
+}

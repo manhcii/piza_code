@@ -1,0 +1,162 @@
+@import './variable';
+
+//***Css Page Contact us ***//
+
+.page-contact {
+    padding: 100px 0 104px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: url('../assets/image/page-contact-back.png') no-repeat;
+        background-size: cover;
+        right: 0;
+        top: 0;
+        width: 25%;
+        height: 100%;
+    }
+
+    .page-contact-content {
+        position: relative;
+        .sub-title {
+            color: #000;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 64px;
+            letter-spacing: 0.96px;
+            margin-bottom: 120px;
+        }
+    }
+
+    .page-contact-main {
+        display: flex;
+        gap: 85px;
+        justify-content: space-between;
+
+        .page-contact-form {
+            flex: 1;
+            max-width: 580px;
+        }
+
+        .page-contact-image {
+            position: relative;
+            flex: 0 0 495px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: url('../assets/image/icons/page-about-cloud.svg') no-repeat;
+                width: 382px;
+                height: 131px;
+                background-size: contain;
+                bottom: -52px;
+                right: -85px;
+            }
+        }
+    }
+}
+
+.page-contact-form {
+    .contact-form-row {
+        .contact-form-line {
+            background: #fff;
+
+            input, select, textarea {
+                padding: 15px 20px;
+                border-radius: 3px;
+                border: 1px solid #EDEDED;
+                line-height: 20px;
+                &::placeholder {
+                    color: #727272;
+                }
+            }
+
+            textarea {
+                height: 115px;
+            }
+        }
+    }
+
+    .page-contact-button {
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #727272;
+        width: 100%;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: #fff;
+            background: $primary;
+        }
+    }
+}
+
+//***Responsive Page Contact us ***//
+@include large-desktop {
+    .page-contact {
+        .page-contact-main {
+            .page-contact-image {
+                &:before {
+                    width: 300px;
+                    right: -50px;
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .page-contact {
+        .page-contact-main  {
+            gap: 40px;
+            position: relative;
+        }
+    }
+}
+
+@include tablet {
+    .page-contact {
+        .page-contact-main {
+            flex-wrap: wrap;
+
+            .page-contact-form {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .page-contact-image {
+                flex: 0 0 100%;
+                &:before {
+                    width: 50%;
+                    right: 0;
+                    bottom: 0;
+                    transform: translateY(50%);
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .page-contact {
+        .page-contact-content {
+            h1 {
+                font-size: 32px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+       
+}

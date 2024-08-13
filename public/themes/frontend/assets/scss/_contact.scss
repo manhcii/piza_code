@@ -1,0 +1,85 @@
+// START CONTACT PAGE
+// START BANNER
+#fhm-contact-banner {
+  background: linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.67) 0.01%,
+      rgba(0, 0, 0, 0.12) 40.63%,
+      rgba(0, 0, 0, 0.12) 68.75%,
+      rgba(0, 0, 0, 0.76) 100%
+    ),
+    url(../images/banners/contact-banner.jpg) center no-repeat;
+  background-size: cover;
+  padding: 242px 0 294px;
+  @include tablet {
+    padding: 200px 0;
+  }
+  @include landscape-phone {
+    padding: 150px 0;
+  }
+  .banner-title {
+    text-align: left;
+    @include landscape-phone {
+      text-align: center;
+    }
+  }
+}
+// END BANNER
+
+// START CONTACT
+#fhm-contact {
+  margin: 100px 0 100px;
+  @include landscape-phone {
+    margin-bottom: 50px;
+  }
+  @include mobile {
+    margin-bottom: 0;
+  }
+  .contact-wrapper {
+    @include flex(row, unset, unset, unset, unset);
+    height: 652px;
+    margin-top: 60px;
+    @include landscape-phone {
+      margin-top: 30px;
+      height: 600px;
+    }
+    .main-form {
+      padding: 65px 65px 0;
+      flex: 1;
+      box-shadow: 0px 0px 30px 0px rgba(0, 98, 132, 0.07);
+      @include tablet {
+        padding: 30px 30px 0;
+      }
+      @include mobile {
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+    .contact-image {
+      height: 100%;
+      width: 100%;
+      max-width: 445px;
+      position: relative;
+      @include desktop {
+        display: none;
+      }
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: $border-radius-xl;
+      }
+      .decor-element {
+        max-width: 150px;
+        width: 100%;
+        top: -30px;
+        right: -30px;
+      }
+    }
+  }
+}
+// END CONTACT
+
+// END CONTACT PAGE

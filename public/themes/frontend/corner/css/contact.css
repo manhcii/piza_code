@@ -1,0 +1,172 @@
+@font-face {
+  font-family: SegoeUI-light;
+  src: url("../assets/fonts/Segoe UI Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-regular;
+  src: url("../assets/fonts/Segoe UI Regurlar.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-semibold;
+  src: url("../assets/fonts/Segoe UI SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: SegoeUI-bold;
+  src: url("../assets/fonts/Segoe UI Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-regular;
+  src: url("../assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-medium;
+  src: url("../assets/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-semibold;
+  src: url("../assets/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Playfair-bold;
+  src: url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+/*Css main*/
+main {
+  margin-top: 64px;
+}
+
+.contact-content h1 {
+  color: #272727;
+  font-family: Playfair-semibold, serif;
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+.contact-content .contact-des {
+  color: #606060;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.36px;
+  margin-bottom: 40px;
+}
+.contact-content .contact-info ul li {
+  margin-bottom: 16px;
+}
+.contact-content .contact-info ul li a, .contact-content .contact-info ul li p {
+  color: #272727;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+.contact-form {
+  margin-bottom: 137px;
+}
+.contact-form .contact-form-row {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.contact-form .contact-form-row .contact-form-line {
+  flex: 0 0 auto;
+  width: calc(50% - 12px);
+}
+.contact-form .contact-form-row .contact-form-line label {
+  display: block;
+  margin-bottom: 8px;
+  color: #606060;
+  font-family: SegoeUI-bold, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.contact-form .contact-form-row .contact-form-line input, .contact-form .contact-form-row .contact-form-line textarea, .contact-form .contact-form-row .contact-form-line select {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  padding: 11px 12px;
+  color: #818181;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-form .contact-form-row .contact-form-line select {
+  appearance: none;
+}
+.contact-form .contact-form-row .contact-form-line .input-select .input-select-arrow {
+  top: -3px;
+  transform: translateY(50%);
+  right: 12px;
+}
+.contact-form .contact-form-row .contact-form-line textarea {
+  resize: none;
+  height: 180px;
+}
+.contact-form .contact-form-row .contact-form-line-full {
+  width: 100%;
+}
+.contact-form .contact-form-row .contact-form-line-full input {
+  width: 18px;
+  height: 18px;
+  accent-color: #527274;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.contact-form .contact-form-row .contact-form-line .acceptprivacy {
+  color: #272727;
+  font-family: SegoeUI-regular, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: initial;
+  vertical-align: middle;
+}
+.contact-form .contact-form-row .contact-form-line .acceptprivacy a {
+  position: relative;
+  color: #272727;
+}
+.contact-form .contact-form-row .contact-form-line .acceptprivacy a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+.contact-form .contact-form-row .contact-form-line .acceptprivacy a:hover {
+  color: #527274;
+}
+.contact-form .contact-form-row .button {
+  color: #F8F8F8;
+  font-family: SegoeUI-bold, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin-top: 16px;
+}
+.contact-form .contact-form-row .button:hover {
+  color: #769496;
+}
+
+@media (max-width: 1199px) {
+  .contact-content {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-form .contact-form-row .contact-form-line {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .contact-content h1 {
+    font-size: 24px;
+  }
+  .contact-content .contact-des {
+    font-size: 14px;
+  }
+  .contact-content .contact-info ul li a, .contact-content .contact-info ul li p {
+    font-size: 14px;
+  }
+}

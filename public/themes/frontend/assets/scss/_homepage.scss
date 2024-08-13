@@ -1,0 +1,1157 @@
+// START HOMEPAGE
+
+// START BANNER
+#fhm-homepage-banner {
+  padding-top: 172px;
+  height: 1096px;
+  background-image: url(../images/banners/hero-banner.jpg);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  @include mobile {
+    height: 990px;
+  }
+  .banner-content {
+    @include flex(column, unset, center, unset, nowrap);
+    position: relative;
+    z-index: 1;
+
+    .banner-desc {
+      font-size: 16px;
+      font-weight: $fw-light;
+      line-height: 30px;
+      margin-bottom: 21px;
+      max-width: 858px;
+    }
+  }
+  .decor-element {
+    &:nth-child(1) {
+      top: 192px;
+      left: 91px;
+      animation: updown ease-in-out 5s infinite alternate;
+      @include tablet {
+        z-index: -1;
+      }
+      @include landscape-phone {
+        display: none;
+      }
+    }
+    &:nth-of-type(2) {
+      top: 518px;
+      left: 258px;
+      animation: updown ease-in-out 5s infinite alternate;
+      @include large-desktop {
+        left: 90px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    &:nth-of-type(3) {
+      bottom: 40px;
+      left: 198px;
+      animation: updown ease-in-out 7s infinite alternate-reverse;
+      @include large-desktop {
+        left: 50px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    &:nth-of-type(4) {
+      top: 50%;
+      right: 426px;
+      animation: updown ease-in-out 7s infinite alternate-reverse;
+      @include large-desktop {
+        right: 165px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    &:nth-of-type(5) {
+      top: 427px;
+      right: 202px;
+      animation: updown ease-in-out 7s infinite alternate;
+      @include large-desktop {
+        right: 50px;
+      }
+      @include tablet {
+        z-index: -1;
+      }
+      @include landscape-phone {
+        display: none;
+      }
+    }
+    &:nth-of-type(6) {
+      bottom: 182px;
+      right: 127px;
+      animation: updown ease-in-out 5s infinite alternate-reverse;
+      @include large-desktop {
+        right: 0;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    &:nth-of-type(7) {
+      bottom: -100px;
+      right: 110px;
+      animation: updown ease-in-out 5s infinite alternate;
+      @include large-desktop {
+        right: 30px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  .banner-slider {
+    margin-top: 80px;
+    .swiper {
+      overflow: visible;
+      &-wrapper {
+        .swiper-slide {
+          transform: rotate(-135deg);
+          transition: all ease 1s;
+          .banner-image {
+            transform: scale(0.5);
+          }
+        }
+        .swiper-slide-active {
+          transform: rotate(0);
+          .banner-image {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .banner-image {
+      max-width: 919px;
+      max-height: 919px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      transition: all ease 1s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    // &-pagination {
+    //   @include absolute(50%, 93%, 5);
+    //   transform: rotate(-90deg);
+    //   width: fit-content;
+    //   height: fit-content;
+    // }
+  }
+}
+// END BANNER
+
+// START CLIENTS
+#fhm-homepage-clients {
+  margin-top: 70px;
+}
+// END CLIENTS
+
+// START ABOUT
+#fhm-homepage-about {
+  margin-top: 150px;
+  position: relative;
+  @include landscape-phone {
+    margin-top: 100px;
+  }
+  .decor-element {
+    position: absolute;
+    z-index: 2;
+    &:nth-child(1) {
+      top: -100px;
+      left: 0;
+      @include desktop {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      top: 20px;
+      right: 50px;
+      animation: updown ease-in-out 4s infinite alternate;
+      @include landscape-phone {
+        display: none;
+      }
+      img {
+        transform: scaleX(-1);
+      }
+    }
+    &:nth-child(3) {
+      bottom: -50px;
+      right: 114px;
+      transform: rotate(15deg);
+      animation: updown ease-in-out 8s infinite alternate-reverse;
+      @include landscape-phone {
+        display: none;
+      }
+    }
+  }
+  .about-wrapper {
+    @include flex(row, space-between, center, 70px, wrap);
+    .about-content {
+      position: relative;
+      z-index: 2;
+      @include large-desktop {
+        width: 100%;
+      }
+      .heading-block-m {
+        align-items: start;
+        max-width: 576px;
+        margin-bottom: 28px;
+        @include large-desktop {
+          max-width: unset;
+          width: 100%;
+        }
+        @include landscape-phone {
+          align-items: center;
+        }
+        .badge,
+        .title,
+        .desc {
+          text-align: left;
+          @include large-desktop {
+            width: 100%;
+            max-width: 100%;
+          }
+          @include landscape-phone {
+            text-align: center;
+          }
+        }
+        .desc {
+          max-width: 515px;
+          font-size: 18px;
+          line-height: 1.8em;
+          @include landscape-phone {
+            font-size: 14px;
+          }
+        }
+      }
+      .main-button-s {
+        @include landscape-phone {
+          margin: 0 auto;
+          display: block;
+          width: fit-content;
+        }
+      }
+    }
+    .about-slider {
+      max-width: 510px;
+      @include landscape-phone {
+        max-width: 100%;
+      }
+      .swiper {
+        overflow-x: visible;
+        .swiper-wrapper {
+          .swiper-slide {
+            transition: all ease 0.75s;
+            opacity: 0;
+          }
+          .swiper-slide-prev {
+            opacity: 0;
+            transform: scale(0.1) rotate(90deg);
+          }
+          .swiper-slide-active {
+            opacity: 1;
+          }
+          .swiper-slide-next {
+            opacity: 1;
+            transform: scale(0.6) rotate(90deg);
+          }
+        }
+      }
+      .about-slider-image {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// END ABOUT
+
+// START PRODUCT
+#fhm-homepage-product {
+  margin-top: 120px;
+  overflow: hidden;
+  @include tablet {
+    margin-top: 80px;
+  }
+  .product-slider {
+    margin: 80px auto 0;
+    position: relative;
+    @include desktop {
+      width: 100%;
+    }
+    @include mobile {
+      margin-top: 40px;
+    }
+    .slick-list {
+      overflow: visible;
+      max-width: 950px;
+      position: relative;
+      width: 100%;
+    }
+
+    .product-item {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 950/650;
+      @include flex(row, unset, center, unset, unset);
+      margin: 0 3px;
+
+      &.slick-current {
+        transform: scale(1);
+        .product-item-content {
+          opacity: 1;
+        }
+        .product-item-image {
+          transform: scaleY(1);
+
+          &::after {
+            backdrop-filter: blur(0);
+          }
+        }
+      }
+      &-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: $border-radius-m;
+        overflow: hidden;
+        transition: all ease 0.5s;
+        transform: scaleY(0.85);
+        @include landscape-phone {
+          transform: unset;
+        }
+
+        &::after {
+          content: "";
+          @include absolute(0, 0, 1);
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.2) 91.94%
+          );
+          backdrop-filter: blur(5px);
+          transition: all ease 0.3s;
+          @include landscape-phone {
+            backdrop-filter: unset;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-content {
+        @include absolute(unset, 70px, 2);
+        bottom: 60px;
+        transition: all ease 0.75s;
+        opacity: 0;
+
+        @include landscape-phone {
+          left: 40px;
+          bottom: 30px;
+        }
+        @include mobile {
+          left: 25px;
+        }
+        &-title {
+          color: $white;
+          font-size: 32px;
+          font-weight: $fw-medium;
+          line-height: normal;
+          margin-bottom: 15px;
+          @include tablet {
+            font-size: 25px;
+            margin-bottom: 10px;
+          }
+          @include landscape-phone {
+            font-size: 20px;
+          }
+          @include mobile {
+            margin-bottom: 8px;
+            font-size: 16px;
+          }
+        }
+        &-price {
+          display: block;
+          color: $white;
+          font-size: 24px;
+          font-weight: $fw-medium;
+          line-height: normal;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          @include tablet {
+            font-size: 20px;
+          }
+          @include landscape-phone {
+            font-size: 16px;
+          }
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .slider-button-next,
+    .slider-button-prev {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .slider-button-next {
+      right: -40px;
+    }
+    .slider-button-prev {
+      left: -25px;
+    }
+  }
+}
+// END PRODUCT
+
+// START MENU
+#fhm-homepage-menu {
+  margin-top: 100px;
+  .menu-wrapper {
+    @include flex(row, space-between, unset, 80px, nowrap);
+    margin-top: 100px;
+    height: 650px;
+    @include tablet {
+      flex-direction: column-reverse;
+      height: fit-content;
+      align-items: center;
+    }
+    @include landscape-phone {
+      margin-top: 50px;
+    }
+
+    .menu-image-list {
+      max-width: 530px;
+      width: 100%;
+      .menu-image {
+        position: relative;
+        max-height: 650px;
+        height: 100%;
+        .decor-element {
+          img {
+            transform: scale(0.1);
+          }
+          &:nth-child(1) {
+            top: -90px;
+            right: -55px;
+            z-index: 0;
+            @include landscape-phone {
+              width: 160px;
+              top: -60px;
+              right: -40px;
+            }
+          }
+          &:nth-child(2) {
+            bottom: -120px;
+            left: -60px;
+            @include landscape-phone {
+              width: 160px;
+              bottom: -50px;
+              left: 0px;
+            }
+          }
+        }
+        &.show {
+          .decor-element {
+            img {
+              transform: scale(1);
+              transition: all cubic-bezier(0.77, 0, 0.175, 1) 1s;
+            }
+          }
+        }
+        &-item {
+          border-top-right-radius: $border-radius-xl;
+          border-bottom-left-radius: $border-radius-xl;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include mobile {
+            border-top-right-radius: 80px;
+            border-bottom-left-radius: 80px;
+          }
+        }
+      }
+    }
+
+    .menu-list {
+      @include flex(column, space-between, center, unset, unset);
+      height: 100%;
+      @include tablet {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: unset;
+        overflow-x: auto;
+        gap: 30px;
+        width: 100%;
+      }
+      .menu-item {
+        padding: 30px;
+        border-radius: $border-radius-m;
+        background-color: $white-2;
+        cursor: pointer;
+        transition: all ease 0.75s;
+        @include tablet {
+          min-width: fit-content;
+        }
+        @include landscape-phone {
+          min-width: 400px;
+        }
+        @include mobile {
+          min-width: 300px;
+        }
+        &.active {
+          background-color: $red;
+          transform: translateX(-20px);
+          @include tablet {
+            transform: translate(0);
+          }
+          .menu-item-title {
+            color: $white;
+            border-color: $white;
+          }
+          .menu-item-desc {
+            color: $white;
+          }
+        }
+        &-title {
+          transition: all ease 0.5s;
+          color: $black;
+          font-size: 32px;
+          font-weight: $fw-semiBold;
+          line-height: normal;
+          margin-bottom: 12px;
+          padding-top: 23px;
+          border-top: 1px dashed $black;
+          text-transform: uppercase;
+          @include landscape-phone {
+            font-size: 20px;
+          }
+        }
+        &-desc {
+          transition: all ease 0.5s;
+          color: $black;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.8em;
+          @include landscape-phone {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+// END MENU
+
+// START REASON
+#fhm-homepage-reason {
+  margin-top: 120px;
+  position: relative;
+  @include desktop {
+    padding: 100px 0;
+  }
+  .decor-element {
+    @include large-desktop {
+      display: none;
+    }
+    &:nth-child(1) {
+      top: 20px;
+      left: -10px;
+    }
+    &:nth-child(2) {
+      bottom: -145px;
+      left: 0;
+    }
+  }
+  .reason-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 86%;
+    @include desktop {
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .reason-wrapper {
+    @include flex(row, unset, center, unset, nowrap);
+    .reason-content {
+      padding: 100px 130px 0px calc((100% - 1160px) / 2);
+      position: relative;
+      z-index: 3;
+      @include large-desktop {
+        padding-right: 40px;
+        padding-left: 10px;
+      }
+      @include desktop {
+        margin: 0 auto;
+        padding: 0 10px 0;
+        max-width: 960px;
+      }
+      @include tablet {
+        max-width: 720px;
+      }
+      @include landscape-phone {
+        max-width: 540px;
+      }
+      .heading-block-s {
+        margin-bottom: 30px;
+        .title {
+          color: $white;
+          margin-bottom: 20px;
+          &::after {
+            display: none;
+          }
+        }
+        .desc {
+          color: $white;
+        }
+      }
+    }
+    .reason-image {
+      border-top-right-radius: $border-radius-xl;
+      border-top-left-radius: $border-radius-xl;
+      overflow: hidden;
+      border-left: 10px solid $red;
+      min-width: 50%;
+      @include desktop {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+// END REASON
+
+// START SERVICE
+#fhm-homepage-service {
+  margin-top: 100px;
+  position: relative;
+  .decor-element {
+    bottom: 0;
+    left: 30px;
+    max-width: 130px;
+    @include large-desktop {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .heading-block-m {
+    .desc {
+      max-width: 660px;
+    }
+  }
+  .service-content {
+    margin-top: 80px;
+    @include landscape-phone {
+      margin-top: 50px;
+    }
+    .service-item {
+      margin-bottom: 36px;
+      @include landscape-phone {
+        margin-bottom: 15px;
+      }
+
+      &-heading {
+        background-color: $white-3;
+        cursor: pointer;
+        padding: 24px 38px 24px 24px;
+        @include flex(row, unset, center, unset, unset);
+        @include landscape-phone {
+          padding: 20px;
+        }
+
+        &-status {
+          @include flex(row, unset, center, 10px, nowrap);
+          margin-right: 40px;
+          min-width: 82px;
+          display: -webkit-flex;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          @include landscape-phone {
+            margin-right: 20px;
+          }
+          @include mobile {
+            margin-right: 10px;
+          }
+          .status {
+            @include flex(row, unset, center, 10px, nowrap);
+            @include mobile {
+              gap: 5px;
+            }
+            &-line {
+              width: 40px;
+              height: 1px;
+              background-color: $gray;
+              transition: all ease 0.3s;
+              @include landscape-phone {
+                width: 20px;
+              }
+            }
+            &-number {
+              font-size: 24px;
+              font-weight: $fw-semiBold;
+              color: $gray;
+              letter-spacing: 0.02em;
+              line-height: 30px;
+              transition: all ease 0.3s;
+              @include landscape-phone {
+                font-size: 18px;
+              }
+              @include mobile {
+                font-size: 16px;
+              }
+            }
+          }
+          .icon {
+            min-width: 30px;
+            height: 30px;
+            @include landscape-phone {
+              min-width: 20px;
+              width: 20px;
+            }
+            svg {
+              width: 100%;
+              path {
+                transition: all ease 0.3s;
+              }
+            }
+          }
+        }
+        &-title {
+          font-size: 24px;
+          font-weight: $fw-semiBold;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: $gray;
+          display: inline-block;
+          transition: all ease 0.3s;
+          padding-right: 20px;
+          width: 100%;
+          flex: 1;
+          @include tablet {
+            font-size: 20px;
+          }
+          @include landscape-phone {
+            font-size: 18px;
+            padding-right: 15px;
+          }
+          @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+            padding-right: 10px;
+          }
+        }
+        &-icon {
+          width: 20px;
+          height: 18px;
+          @include flex(row, center, center, unset, unset);
+          margin-left: auto;
+          transition: all ease 0.5s;
+          svg {
+            width: 100%;
+            path {
+              transition: all ease 0.5s;
+            }
+          }
+        }
+        &:not(.collapsed) {
+          background-color: $red;
+          box-shadow: unset;
+          * {
+            color: $white;
+          }
+          .service-item-heading-status {
+            .status {
+              &-line {
+                background-color: $white;
+              }
+            }
+            .icon {
+              path {
+                fill: $white;
+              }
+            }
+          }
+
+          .service-item-heading-icon {
+            transform: rotate(180deg);
+            svg {
+              path {
+                stroke: $white;
+              }
+            }
+          }
+        }
+      }
+      &-body {
+        border: 1px solid $red;
+        &-slider {
+          padding: 10px;
+          .service-item-body-image {
+            width: 100%;
+            max-height: 220px;
+            @include landscape-phone {
+              max-height: 291px;
+            }
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+        &-content {
+          padding: 30px;
+          .content-text {
+            max-width: 980px;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 30px;
+            color: $black;
+          }
+          .content-button {
+            font-size: 16px;
+            font-weight: $fw-semiBold;
+            color: $black;
+            line-height: 1.4em;
+            margin: 24px auto 0;
+            display: block;
+            width: fit-content;
+            .icon {
+              width: 18px;
+              height: 18px;
+              display: inline-block;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// END SERVICE
+
+// START TESTIMONIALS
+#fhm-homepage-testimonials {
+  background-image: url(../images/banners/testimonials.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0;
+  margin-top: 100px;
+  position: relative;
+  .decor-element {
+    top: -100px;
+    left: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  .heading-block-m {
+    * {
+      color: $white;
+    }
+  }
+  .testimonials-slider {
+    margin-top: 60px;
+    position: relative;
+    .testimonials-item {
+      min-height: 476px;
+      border-radius: $border-radius-m;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 18px;
+      @include flex(row, center, end, unset, unset);
+
+      .testimonials-content {
+        padding: 40px 40px 20px;
+        border-radius: $border-radius-s;
+        background-color: $white;
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        &-user {
+          width: 50px;
+          height: 50px;
+          transform: translateX(-50%);
+          position: relative;
+          @include absolute(-25px, 50%, 1);
+          &::after,
+          &::before {
+            content: "";
+            width: 20px;
+            height: 15px;
+            background-color: transparent;
+          }
+          &::before {
+            @include absolute(11px, -52%, 0);
+
+            border-bottom-right-radius: $border-radius-s;
+            box-shadow: 8px 0px $white;
+          }
+          &::after {
+            @include absolute(11px, 112%, 0);
+            border-bottom-left-radius: $border-radius-s;
+            box-shadow: -8px 0px $white;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius-xxl;
+            outline: 8px solid $white;
+          }
+        }
+        &-name {
+          color: $black-1;
+          text-align: center;
+          font-size: 18px;
+          font-weight: $fw-semiBold;
+          line-height: 23px;
+          text-transform: capitalize;
+          margin-bottom: 5px;
+        }
+        &-role {
+          color: $black;
+          text-align: center;
+          font-size: 12px;
+          line-height: 15px;
+          margin-bottom: 20px;
+        }
+        &-review {
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+          margin-bottom: 20px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          min-height: 54px;
+        }
+        &-rating {
+          @include flex(row, center, center, 5px, nowrap);
+          .rating-item {
+            width: 14px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .slider-button-next,
+    .slider-button-prev {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .slider-button-next {
+      right: -80px;
+    }
+    .slider-button-prev {
+      left: -80px;
+    }
+  }
+}
+// END TESTIMONIALS
+
+// START NEWS
+#fhm-homepage-news {
+  margin-top: 100px;
+}
+// END NEWS
+
+// START INSTAGRAM
+#fhm-homepage-instagram {
+  margin-top: 100px;
+  overflow: hidden;
+  .instagram-heading {
+    @include flex(row, space-between, center, 20px, wrap);
+    &-title {
+      font-size: 58px;
+      line-height: 72px;
+      font-family: $font-family-3;
+      color: $red;
+      @include landscape-phone {
+        font-size: 42px;
+        line-height: 50px;
+      }
+      @include mobile {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+    &-button {
+      border: 1px solid $gray-4;
+      padding: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: $red;
+      transition: all ease 0.75s;
+      font-size: 12px;
+      line-height: 1;
+      @include flex(row, space-between, center, 10px, nowrap);
+      .icon {
+        display: inline-block;
+        min-width: 30px;
+        margin-left: auto;
+        width: 30px;
+
+        svg {
+          width: 100%;
+          path {
+            transition: all ease 0.75s;
+          }
+        }
+      }
+      &:hover {
+        background-color: $red;
+        border-color: $red;
+        color: $white;
+        .icon {
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .instagram-slider {
+    position: relative;
+    margin-top: 80px;
+    .swiper {
+      overflow: visible;
+      &:first-child {
+        margin-bottom: 24px;
+        @include mobile {
+          margin-bottom: 8px;
+        }
+      }
+      .swiper-slide {
+        width: fit-content;
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+    .instagram-item {
+      position: relative;
+      &:hover {
+        .instagram-item-overlay {
+          opacity: 1;
+        }
+      }
+      &-image {
+        height: 354px;
+        width: auto;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-overlay {
+        @include flex(column, center, center, unset, unset);
+        @include absolute(0, 0, 1);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: all ease 0.75s;
+        background: linear-gradient(
+            126deg,
+            rgba(35, 179, 224, 0.6) 24.1%,
+            rgba(35, 179, 224, 0.24) 60.28%
+          ),
+          linear-gradient(
+            244deg,
+            rgba(236, 240, 38, 0.6) 13.45%,
+            rgba(236, 240, 38, 0.12) 41.9%
+          ),
+          linear-gradient(
+            347deg,
+            rgba(237, 28, 36, 0.6) 1.07%,
+            rgba(237, 28, 36, 0.12) 35.23%
+          );
+        &::after {
+          @include absolute(50%, 50%, 1);
+          content: "";
+          width: 90%;
+          height: 85%;
+          border: 1px solid $white;
+          transform: translate(-50%, -50%);
+        }
+        .icon {
+          width: 140px;
+          height: 140px;
+          img {
+            width: 100%;
+          }
+        }
+        .title {
+          font-size: 24px;
+          line-height: normal;
+          font-family: $font-family-2;
+          color: $white;
+        }
+      }
+    }
+    .slider-button-next {
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.05);
+    }
+  }
+}
+// END INSTAGRAM
+
+// START CTA
+#fhm-homepage-cta {
+  @include mobile {
+    margin-top: 8px;
+  }
+}
+// END CTA
+
+// END HOMEPAGE

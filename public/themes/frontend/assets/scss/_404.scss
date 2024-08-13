@@ -1,0 +1,100 @@
+// START 404 PAGE
+// START BANNER
+#fhm-notfound-banner {
+  background: linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.67) 0.01%,
+      rgba(0, 0, 0, 0.12) 40.63%,
+      rgba(0, 0, 0, 0.12) 68.75%,
+      rgba(0, 0, 0, 0.76) 100%
+    ),
+    url(../images/banners/404-banner.jpg) center no-repeat;
+  background-size: cover;
+  height: 630px;
+  @include tablet {
+    height: 400px;
+  }
+}
+// END BANNER
+
+// START 404
+#fhm-notfound {
+  margin-top: -200px;
+  .notfound-wrapper {
+    padding: 75px;
+    background-color: $white-3;
+    border-radius: $border-radius-l;
+    @include flex(column, center, center, 30px, nowrap);
+    position: relative;
+    @include landscape-phone {
+      padding: 40px;
+      gap: 20px;
+    }
+    .decor-element {
+      @include landscape-phone {
+        display: none;
+      }
+      &:nth-child(1) {
+        max-width: 150px;
+        width: 100%;
+        bottom: -70px;
+        left: -40px;
+        transform: rotate(30deg);
+      }
+      &:nth-child(2) {
+        max-width: 350px;
+        width: 100%;
+        bottom: -100px;
+        right: -100px;
+        @include tablet {
+          max-width: 200px;
+          bottom: -70px;
+          right: -70px;
+        }
+      }
+    }
+    .notfound-image {
+      max-width: 610px;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .notfound-title {
+      font-size: 48px;
+      line-height: 60px;
+      max-width: 712px;
+      text-align: center;
+      color: $gray-3;
+      font-weight: $fw-bold;
+      @include landscape-phone {
+        font-size: 32px;
+        line-height: 1.5;
+      }
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+    .notfound-button {
+      border-radius: $border-radius-xxl;
+      background-color: $red;
+      padding: 15px;
+      color: $white;
+      display: block;
+      max-width: 383px;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: $fw-semiBold;
+      transition: all ease 0.75s;
+      line-height: 20px;
+      &:hover {
+        background-color: $red-2;
+      }
+    }
+  }
+}
+// END 404
+// END 404 PAGE
